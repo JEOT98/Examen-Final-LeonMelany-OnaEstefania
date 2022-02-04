@@ -18,9 +18,8 @@ body {
 }
 
 .contenedor-1{
+    height: 100vh;
     background-color: #324E50;
-    width: 100%;
-	height: 100vh;
     padding: 3rem;
 }
 
@@ -35,7 +34,8 @@ body {
 .container{
     width: 90%;
     max-width: 1200px;
-    margin: auto;
+    margin: 0;
+    margin-top: 15rem;
 }
 .container .btn-menu {
     float: left;
@@ -128,7 +128,7 @@ body {
 .titulo-principal{
     width: 18rem;
     color: white;
-    font-size: 2rem;
+    font-size: 1.7rem;
     font-family: 'Nunito', sans-serif;
 }
 
@@ -136,14 +136,19 @@ body {
     display: flex;
     justify-content: center;
     align-items: flex-end;
-    margin-top: 18rem;
+    padding: 2rem;
+}
+
+.boton1{
+    margin-top: 15rem;
+
 }
 
 button{
     font-size: 1.2rem;
     font-family: 'Poppins', sans-serif;
     padding: 0.1rem;
-    width: 6rem;
+    width: 7rem;
     height: 2rem;
     border-style: none;
     border-radius: 1rem;
@@ -158,9 +163,8 @@ button:hover {
 }
 
 .contenedor-2{
-    width: 100%;
-    height: 100vh;
     display: flex;
+    height: 100vh;
 }
 
 .reciclaje{
@@ -178,21 +182,23 @@ button:hover {
 
 .numero {
     color: #00BF8D;
-    font-size: 4rem;
     font-family: 'Nunito', sans-serif;
+    font-size: 3rem;
 }
 
 .subtitulo{
+    font-size: 3rem;
     color: white;
-    font-size: 3.5rem;
     font-family: 'Nunito', sans-serif;
 }
 
 h2{
     position: absolute;
-    padding: 5rem;
+    padding: 4rem;
+    font-size: 1.5rem;
     color: white;
     font-family: 'Poppins', sans-serif;
+    font-weight: lighter;
 }
 
 .parrafo{
@@ -200,12 +206,11 @@ h2{
     color: white;
     padding: 6rem;
     font-family: 'Poppins', sans-serif;
+    font-size: 0.9rem;
 }
 
 .contenedor-3{
     background-color: #324E50;
-    width: 100%;
-    height: 100vh;
 }
 
 .sabiasque{
@@ -217,12 +222,14 @@ h2{
 }
 
 .titulo-tarjetas {
-    
     color: #324E50;
     font-family: 'Poppins', sans-serif;
+    font-size: 1.5rem;
 }
 
 .texto{
+    text-align: left;
+    font-size: 0.7rem;
     color: #324E50;
     font-family: 'Poppins', sans-serif;
 }
@@ -247,7 +254,6 @@ h2{
 
 .contenedor-4{
     display: flex;
-    width: 100%;
     height: 100vh;
 }
 
@@ -267,8 +273,6 @@ h2{
 
 .contenedor-5{
     background-color: #324E50;
-    width: 100%;
-    height: 100vh;
 }
 
 .emac{
@@ -304,4 +308,58 @@ h2{
 .footer_link a:hover,
 .footer_link a:active {
     color: black;
+}
+
+/* tablet */
+
+@media screen and (max-width : 500px){
+    .boton1{
+        margin-top: 5rem;
+    }
+
+    .reciclaje{
+        width: 500px;
+        height: 50vh;
+        border-top-right-radius: 0;
+        border-bottom-left-radius: 30px;
+        border-bottom-right-radius: 30px;
+    }
+    .campana{
+        width: 500px;
+        height: 50vh;
+        border-top-left-radius: 0;
+        border-bottom-left-radius: 30px;
+        border-bottom-right-radius: 30px;
+        margin-left: 0;
+    }
+
+    .numero,
+    .subtitulo{
+        font-size: 2.5rem;
+    }
+
+    .parrafo{
+        font-size: 0.7rem;
+        width: 36rem;
+        height: 15.5rem;
+        overflow-y: hidden;
+    }
+
+    .tarjetas{
+        display: inline-block;
+    }
+    
+    .tarjeta{
+        margin: 2rem;
+        width: 17rem;
+        height: 10rem;
+    }
+
+    .titulo-tarjetas {
+        font-size: 1rem;
+    }
+    
+    .texto{
+        display: none;
+    }
 }

@@ -1,0 +1,307 @@
+/* font-family: 'Nunito', sans-serif;
+font-family: 'Poppins', sans-serif; */
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #e9e9e9;
+}
+
+
+.contenedor-principal{
+    width: 100%;
+	height: 100vh;
+}
+
+.contenedor-1{
+    background-color: #324E50;
+    width: 100%;
+	height: 100vh;
+    padding: 3rem;
+}
+
+/*Encabezado*/
+
+.header{
+    width: 100%;
+    height: 100px;
+    position: fixed;
+    top: 0;left: 0;
+}
+.container{
+    width: 90%;
+    max-width: 1200px;
+    margin: auto;
+}
+.container .btn-menu {
+    float: left;
+    line-height:100px;
+}
+.container .btn-menu label{
+    color: #fff;
+    font-size: 25px;
+    cursor: pointer;
+}
+
+.container .menu{
+    float: right;
+    line-height: 100px;
+}
+.container .menu a{
+    display: inline-block;
+    padding: 15px;
+    line-height: normal;
+    text-decoration: none;
+    color: #fff;
+    transition: all 0.3s ease;
+    border-bottom: 2px solid transparent;
+    font-size: 15px;
+    margin-right: 5px;
+}
+.container .menu a:hover{
+    border-bottom: 2px solid #c7c7c7;
+    padding-bottom: 5px;
+}
+/*Fin de encabezado*/
+
+/*Menù lateral*/
+#btn-menu{
+    display: none;
+}
+.container-menu{
+    position: absolute;
+    background: rgba(0,0,0,0.5);
+    width: 100%;
+    height: 100vh;
+    top: 0;left: 0;
+    transition: all 500ms ease;
+    opacity: 0;
+    visibility: hidden;
+}
+#btn-menu:checked ~ .container-menu{
+    opacity: 1;
+    visibility: visible;
+}
+.cont-menu{
+    width: 100%;
+    max-width: 250px;
+    background: #1c1c1c;
+    height: 100vh;
+    position: relative;
+    transition: all 500ms ease;
+    transform: translateX(-100%);
+}
+#btn-menu:checked ~ .container-menu .cont-menu{
+    transform: translateX(0%);
+}
+.cont-menu nav{
+    transform: translateY(15%);
+}
+.cont-menu nav a{
+    display: block;
+    text-decoration: none;
+    padding: 20px;
+    color: #c7c7c7;
+    border-left: 5px solid transparent;
+    transition: all 400ms ease;
+}
+.cont-menu nav a:hover{
+    border-left: 5px solid #c7c7c7;
+    background: #1f1f1f;
+}
+.cont-menu label{
+    position: absolute;
+    right: 5px;
+    top: 10px;
+    color: #fff;
+    cursor: pointer;
+    font-size: 18px;
+}
+
+/*Final de menu lateral*/
+
+
+.titulo-principal{
+    width: 18rem;
+    color: white;
+    font-size: 2rem;
+    font-family: 'Nunito', sans-serif;
+}
+
+.boton{
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    margin-top: 18rem;
+}
+
+button{
+    font-size: 1.2rem;
+    font-family: 'Poppins', sans-serif;
+    padding: 0.1rem;
+    width: 6rem;
+    height: 2rem;
+    border-style: none;
+    border-radius: 1rem;
+    background-color: #00BF8D;
+    color: white;
+}
+
+button:hover {
+    background-color: white;
+    color: #00BF8D;
+    box-shadow: 0 0 0.5rem rgba(255, 255, 255, 0.507);
+}
+
+.contenedor-2{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+}
+
+.reciclaje{
+    background-color: #2D525E;
+    width: 70vw;
+    height: 100vh;
+    border-top-right-radius: 30px;
+    border-bottom-right-radius: 30px;
+    padding: 3rem;
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    gap: 1rem;
+}
+
+.numero {
+    color: #00BF8D;
+    font-size: 4rem;
+    font-family: 'Nunito', sans-serif;
+}
+
+.subtitulo{
+    color: white;
+    font-size: 3.5rem;
+    font-family: 'Nunito', sans-serif;
+}
+
+h2{
+    position: absolute;
+    padding: 5rem;
+    color: white;
+    font-family: 'Poppins', sans-serif;
+}
+
+.parrafo{
+    position: absolute;
+    color: white;
+    padding: 6rem;
+    font-family: 'Poppins', sans-serif;
+}
+
+.contenedor-3{
+    background-color: #324E50;
+    width: 100%;
+    height: 100vh;
+}
+
+.sabiasque{
+    padding: 3rem;
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    gap: 1rem;
+}
+
+.titulo-tarjetas {
+    
+    color: #324E50;
+    font-family: 'Poppins', sans-serif;
+}
+
+.texto{
+    color: #324E50;
+    font-family: 'Poppins', sans-serif;
+}
+
+.tarjetas{
+    display: flex;
+    justify-content: center;
+    padding: 4rem;
+    gap: 2.8rem;
+}
+
+.tarjeta{
+    text-align: center;
+    width: 17rem;
+    height: 20rem;
+    padding: 1.5rem;
+    background-color: white;
+    border-radius: 1rem;
+    position: relative;
+}
+
+
+.contenedor-4{
+    display: flex;
+    width: 100%;
+    height: 100vh;
+}
+
+.campana{
+    background-color: #2D525E;
+    width: 70vw;
+    height: 100vh;
+    margin-left: 30vw;
+    border-top-left-radius: 30px;
+    border-bottom-left-radius: 30px;
+    padding: 3rem;
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    gap: 1rem;
+}
+
+.contenedor-5{
+    background-color: #324E50;
+    width: 100%;
+    height: 100vh;
+}
+
+.emac{
+    padding: 3rem;
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    gap: 1rem;
+}
+
+.footer {
+    padding: 2rem;
+}
+
+.footer_links {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+}
+
+.footer_link {
+    display: inline-block;
+    margin: 0 16px;
+    font-family: 'Poppins', sans-serif;
+}
+
+.footer_link a {
+    color: #324E50;
+    text-decoration: none;
+}
+
+.footer_link a:hover,
+.footer_link a:active {
+    color: black;
+}

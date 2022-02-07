@@ -35,7 +35,7 @@ body {
     width: 90%;
     max-width: 1200px;
     margin: 0;
-    margin-top: 15rem;
+    margin-top: 10rem;
 }
 .container .btn-menu {
     float: left;
@@ -126,9 +126,9 @@ body {
 
 
 .titulo-principal{
-    width: 18rem;
+    width: 20rem;
     color: white;
-    font-size: 1.7rem;
+    font-size: 2rem;
     font-family: 'Nunito', sans-serif;
 }
 
@@ -145,21 +145,40 @@ body {
 }
 
 button{
-    font-size: 1.2rem;
     font-family: 'Poppins', sans-serif;
-    padding: 0.1rem;
+    text-align: center;
     width: 7rem;
-    height: 2rem;
-    border-style: none;
-    border-radius: 1rem;
-    background-color: #00BF8D;
+    height: 2.5rem;
+    padding: 0.1rem;
+    font-size: 1.2rem;
+    border-radius: 1.5rem;
+    border: 2px solid #00BF8D;
+    background: transparent;
     color: white;
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+    z-index: 0;
 }
 
-button:hover {
-    background-color: white;
-    color: #00BF8D;
-    box-shadow: 0 0 0.5rem rgba(255, 255, 255, 0.507);
+span{
+    background-color: #00BF8D;
+    height: 100%;
+    width: 0;
+    border-radius: 1.5rem;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    z-index: -1;
+    transition: 0.5s;
+}
+
+button:hover span{
+    width: 100%;
+}
+
+button:hover{
+    border: none;
 }
 
 .contenedor-2{
@@ -362,4 +381,11 @@ h2{
     .texto{
         display: none;
     }
+}
+
+@media screen and (max-width : 50rem) {
+    .parrafo{
+        width: 30rem;
+    }
+
 }

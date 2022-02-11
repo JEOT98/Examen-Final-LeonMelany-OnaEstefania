@@ -1098,12 +1098,12 @@ button:hover{
 
     .titulo-principal{
         width: auto;
-        font-size: 1.5rem;
+        font-size: 1.7rem;
     }
     
     .titulo-principal-2{
         width: auto;
-        font-size: 1.3rem;
+        font-size: 1.5rem;
     }
 
     .boton1{
@@ -1170,7 +1170,7 @@ button:hover{
     }
     
     .imagen-reciclaje{
-        width: 340px;
+        width: 390px;
         height: 300px;
         background-size: 20rem;
         background-position-x: center;
@@ -1185,7 +1185,7 @@ button:hover{
     }
     
     .infografias{
-        width: 340px;
+        width: 390px;
         height: 300px;
         background-size: 15rem;
         background-repeat: no-repeat;
@@ -1193,13 +1193,13 @@ button:hover{
         margin: 5%;
     }
     .campana {
-        width: 340px;
+        width: 390px;
         height: 260px;
         margin: 5%;
     }
 
     .reciclaje{
-        width: 340px;
+        width: 390px;
         height: 390px;
         margin: 5%;
     }
@@ -1219,23 +1219,24 @@ button:hover{
     }
     .emac{
         width: auto;
-        margin: 5%;
+        height: auto;
     }
     
     .tarjetas{
-        width: 350px;
+        width: 360px;
         height: auto;
         display: inline-block;
         padding: 0;
         gap:0;
         perspective: 3000px;
         overflow: hidden;
+        margin: 5%;
     }
     
     .tarjeta{
         width: 300px;
         height: 20rem;
-        margin: 10%;
+        margin: 12%;
     }
 
     .texto{
@@ -1270,7 +1271,7 @@ button:hover{
         height: auto;
         width: auto;
         padding: 1.5rem;
-        margin: -15% 5%;
+        margin: -30% 5%;
     }
 
     .card:focus-within~.card, .card:hover~.card {
@@ -1304,16 +1305,19 @@ button:hover{
     }
 
     .footer-contenedor{
-        gap: 1.1rem;
+        gap: 1rem;
     }
 
     .tarjeta{
         height: 21rem;
     }
+    .footer-titulo{
+        font-size: 0.7rem;
+    }
 
     .fotter-texto{
-        margin: 0.5rem;
-        font-size: 0.7rem;
+        margin: 0.2rem;
+        font-size: 0.5rem;
     }
 
 }

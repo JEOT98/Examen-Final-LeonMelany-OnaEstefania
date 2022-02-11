@@ -1,5 +1,7 @@
 /* font-family: 'Nunito', sans-serif;
-font-family: 'Poppins', sans-serif; */
+font-family: 'Poppins', sans-serif; 
+colores : #00BF8D #2d525e #324E50*/
+ 
 
 *{
     margin: 0;
@@ -7,153 +9,307 @@ font-family: 'Poppins', sans-serif; */
     box-sizing: border-box;
 }
 
+html{
+    scroll-behavior: smooth;
+}
+
 body {
-    background-color: #e9e9e9;
+    background-color: #fffffc;
+    font-family: 'Poppins', sans-serif;
 }
 
+body::-webkit-scrollbar {
+    width: 12px;
+}
 
-.contenedor-principal{
-    width: 100%;
+body::-webkit-scrollbar-thumb {
+    background: linear-gradient(transparent,#00BF8D);
+    border-radius: 6px;
+}
+
+body::-webkit-scrollbar-thumb:hover {
+    background: linear-gradient(to top, #00BF8D 20%, transparent);
+}
+
+/* inicio Seccion menu */
+#header {
+	position: fixed;
+	z-index: 1000;
+	left: 0;
+	top: 0;
+	width: 100vw;
+	height: auto;
+}
+#header .header {
+	min-height: 8vh;
+	transition: 0.3s ease background-color;
+}
+#header .nav-menu {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+    background: transparent;
+	width: 100%;
+	height: 100%;
+	max-width: 1300px;
+	padding: 0 10px;
+    margin-left: 90%;
+    margin-top: 2rem;
+}
+#header .nav-lista ul {
+    font-family: 'Poppins', sans-serif;
+    font-weight: bold;
+	list-style: none;
+	position: absolute;
+	background-color: rgb(31, 30, 30);
+	width: 100vw;
 	height: 100vh;
+	left: 100%;
+	top: 0;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	z-index: 1;
+	overflow-x: hidden;
+	transition: 0.5s ease left;
+}
+#header .nav-lista ul.active {
+	left: 0%;
+}
+#header .nav-lista ul a {
+	font-size: 2.3rem;
+	letter-spacing: 0.2rem;
+	text-decoration: none;
+	color: white;
+	text-transform: uppercase;
+	padding: 20px;
+	display: block;
+}
+#header .nav-lista ul a::after {
+	content: attr(data-after);
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%) scale(0);
+	color: rgba(240, 248, 255, 0.021);
+	font-size: 10rem;
+	letter-spacing: 50px;
+	z-index: -1;
+	transition: 0.3s ease letter-spacing;
+}
+#header .nav-lista ul li:hover a::after {
+	transform: translate(-50%, -50%) scale(1);
+	letter-spacing: initial;
+}
+#header .nav-lista ul li:hover a {
+	color: #00BF8D;
+}
+#header .icono {
+	height: 60px;
+	width: 60px;
+	display: inline-block;
+	border: 4px solid #00BF8D;
+	border-radius: 50%;
+	position: relative;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	z-index: 100;
+	cursor: pointer;
+	transform: scale(0.8);
+	margin-right: 20px;
+}
+#header .icono:after {
+	position: absolute;
+	content: '';
+	height: 100%;
+	width: 100%;
+	border-radius: 50%;
+	border: 4px solid #00BF8D;
+	animation: icono_puls 1s ease infinite;
+}
+#header .icono .linea {
+	height: 2px;
+	width: 30px;
+	position: relative;
+	background-color: #00BF8D;
+	z-index: -1;
+}
+#header .icono .linea::after,
+#header .icono .linea::before {
+	content: '';
+	position: absolute;
+	height: 100%;
+	width: 100%;
+	left: 0;
+	background-color: #00BF8D;
+	transition: 0.3s ease;
+	transition-property: top, bottom;
+}
+#header .icono .linea::after {
+	top: 8px;
+}
+#header .icono .linea::before {
+	bottom: 8px;
+}
+#header .icono.active .linea::before {
+	bottom: 0;
+}
+#header .icono.active .linea::after {
+	top: 0;
 }
 
+@keyframes icono_puls {
+	0% {
+		opacity: 1;
+		transform: scale(1);
+	}
+	100% {
+		opacity: 0;
+		transform: scale(1.4);
+	}
+}
+/* fin Seccion Menu */
+
+
+/* Seccion Inicio*/
 .contenedor-1{
     height: 100vh;
-    background-color: #324E50;
     padding: 3rem;
+    background-image: url(/RECURSOS/botella\ y\ planeta.svg);
+    background-position-x: 90%;
+    background-position-y: center;
+    background-size: 25rem;
+    background-repeat: no-repeat;
 }
-
-/*Encabezado*/
-
-.header{
-    width: 100%;
-    height: 100px;
-    position: fixed;
-    top: 0;left: 0;
-}
-.container{
-    width: 90%;
-    max-width: 1200px;
-    margin: 0;
-    margin-top: 10rem;
-}
-.container .btn-menu {
-    float: left;
-    line-height:100px;
-}
-.container .btn-menu label{
-    color: #fff;
-    font-size: 25px;
-    cursor: pointer;
-}
-
-.container .menu{
-    float: right;
-    line-height: 100px;
-}
-.container .menu a{
-    display: inline-block;
-    padding: 15px;
-    line-height: normal;
-    text-decoration: none;
-    color: #fff;
-    transition: all 0.3s ease;
-    border-bottom: 2px solid transparent;
-    font-size: 15px;
-    margin-right: 5px;
-}
-.container .menu a:hover{
-    border-bottom: 2px solid #c7c7c7;
-    padding-bottom: 5px;
-}
-/*Fin de encabezado*/
-
-/*Menù lateral*/
-#btn-menu{
-    display: none;
-}
-.container-menu{
-    position: absolute;
-    background: rgba(0,0,0,0.5);
-    width: 100%;
-    height: 100vh;
-    top: 0;left: 0;
-    transition: all 500ms ease;
-    opacity: 0;
-    visibility: hidden;
-}
-#btn-menu:checked ~ .container-menu{
-    opacity: 1;
-    visibility: visible;
-}
-.cont-menu{
-    width: 100%;
-    max-width: 250px;
-    background: #1c1c1c;
-    height: 100vh;
-    position: relative;
-    transition: all 500ms ease;
-    transform: translateX(-100%);
-}
-#btn-menu:checked ~ .container-menu .cont-menu{
-    transform: translateX(0%);
-}
-.cont-menu nav{
-    transform: translateY(15%);
-}
-.cont-menu nav a{
-    display: block;
-    text-decoration: none;
-    padding: 20px;
-    color: #c7c7c7;
-    border-left: 5px solid transparent;
-    transition: all 400ms ease;
-}
-.cont-menu nav a:hover{
-    border-left: 5px solid #c7c7c7;
-    background: #1f1f1f;
-}
-.cont-menu label{
-    position: absolute;
-    right: 5px;
-    top: 10px;
-    color: #fff;
-    cursor: pointer;
-    font-size: 18px;
-}
-
-/*Final de menu lateral*/
-
 
 .titulo-principal{
     width: 20rem;
-    color: white;
-    font-size: 2rem;
+    font-size: 4rem;
     font-family: 'Nunito', sans-serif;
+}
+
+.titulo-principal-2{
+    width: 20rem;
+    font-size: 3rem;
+    font-family: 'Nunito', sans-serif;
+}
+
+
+#inicio {
+    position: relative;
+	z-index: 1;
+}
+#inicio::after {
+	content: '';
+	position: absolute;
+	left: 0;
+	top: 0;
+	height: 100%;
+	width: 100%;
+	z-index: -1;
+}
+#inicio .inicio {
+	max-width: 1200px;
+	margin: 0 auto;
+	padding: 0 50px;
+	justify-content: flex-start;
+}
+#inicio h1 {
+    display: block;
+	width: fit-content;
+	position: relative;
+	color: transparent;
+	animation: tituloprincipal 0.5s ease forwards;
+	animation-delay: 1s;
+}
+#inicio h1:nth-child(1) {
+    animation-delay: 1s;
+}
+#inicio h1:nth-child(2) {
+	animation-delay: 2s;
+}
+#inicio h1:nth-child(3) {
+    animation: tituloprincipal_name 0.5s ease forwards;
+	animation-delay: 3s;
+}
+#inicio h1 span {
+    position: absolute;
+	top: 0;
+	left: 0;
+	height: 100%;
+	width: 0;
+	background-color: #00BF8D;
+    border-radius: 3rem;
+	animation: tituloprincipal_box 1s ease;
+	animation-delay: 0.5s;
+}
+#inicio h1:nth-child(1) span {
+    animation-delay: 0.5s;
+}
+#inicio h1:nth-child(2) span {
+	animation-delay: 1.5s;
+}
+#inicio h1:nth-child(3) span {
+	animation-delay: 2.5s;
+}
+
+@keyframes tituloprincipal_box {
+    50% {
+        width: 100%;
+		left: 0;
+	}
+	100% {
+		width: 0;
+		left: 100%;
+	}
+}
+@keyframes tituloprincipal {
+	100% {
+        color: #324E50;
+	}
+}
+@keyframes tituloprincipal_name {
+    100% {
+        color: #00BF8D;
+	}
 }
 
 .boton{
     display: flex;
     justify-content: center;
     align-items: flex-end;
-    padding: 2rem;
+    padding: 0.5rem;
 }
 
 .boton1{
     margin-top: 15rem;
-
 }
 
-button{
+.boton1 a,
+.boton-sabias a,
+button a{
+    text-decoration: none;
+    color: #324E50;
+}
+
+.boton1 a:hover,
+.boton-sabias a:hover,
+button a:hover {
+    color: white;
+}
+
+button {
     font-family: 'Poppins', sans-serif;
     text-align: center;
     width: 7rem;
     height: 2.5rem;
-    padding: 0.1rem;
     font-size: 1.2rem;
+    background: transparent;
+    padding: 0.1rem;
     border-radius: 1.5rem;
     border: 2px solid #00BF8D;
-    background: transparent;
     color: white;
     cursor: pointer;
     position: relative;
@@ -181,17 +337,142 @@ button:hover{
     border: none;
 }
 
+/* Final Seccion Inicio*/
+
+/* Seccion Proyecto*/
+
+.proyecto{
+    padding: 3rem;
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    gap: 1rem;
+}
+
+.testimonial__image-container {
+    width: 47%;
+    height: 10%;
+    margin: 0 3%;
+    display: inline-block;
+    vertical-align: middle;
+
+}
+
+
+.testimonial__info {
+    border: 3px solid #00BF8D;
+    border-radius: 1rem;
+    box-shadow: 3px 3px 5px 3px rgba(0, 0, 0, 0.3);
+    padding: 2rem;
+    text-align: center;
+    display: inline-block;
+    vertical-align: middle;
+    width: 43%;
+    height: 50%;
+    overflow-y: hidden;
+}
+.testimonial {
+    font-size: 1rem;
+    margin: 5% 0;
+}
+
+.testimonial:first-of-type {
+    margin-top: 6rem;
+}
+
+.testimonial__image {
+    width: 50%;
+    height: 18rem;
+    margin: 0 25%;
+    vertical-align: top;
+}
+
+#proyecto-2.testimonial {
+    text-align: right;
+}
+
+#proyecto-2 .testimonial__info {
+    text-align: center;
+}
+
+.testimonial__titulo {
+    margin: 0.2rem;
+    color: #00BF8D;
+    font-size: 2rem;
+}
+
+.testimonial__subtitle {
+    margin: 0;
+    font-size: 1.1rem;
+    color: rgb(100, 100, 100);
+}
+
+.testimonial__subtitle a {
+    color: inherit;
+    text-decoration: none;
+}
+
+.testimonial__subtitle a:hover,
+.testimonial__subtitle a:active {
+    color: #7a7a7a;
+}
+
+.testimonial__text {
+    margin: 1rem;
+    color: #324E50;
+    font-size: 0.9rem;
+}
+
+/* Fin Seccion Proyecto*/
+
+.metodologias{
+    width: 100%;
+    height: 100vh;
+    padding: 1.5rem;
+}
+.metodologia-titulo{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+}
+
+.metodologia{
+    margin: 2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+}
+
+.metodologia-cards{
+    width: 33%;
+    height: 25rem;
+    padding: 2rem;
+    box-shadow: 3px 3px 5px 3px rgba(0, 0, 0, 0.3);
+
+}
+
+.metodologia-texto {
+    font-size: 0.9rem;
+    margin: 3rem 0;
+}
+
+
+/* Seccion Reciclaje*/
 .contenedor-2{
     display: flex;
-    height: 100vh;
+    margin: 3%;
+    padding: 5% 0;
+    gap: 3%;
 }
 
 .reciclaje{
-    background-color: #2D525E;
-    width: 70vw;
-    height: 100vh;
-    border-top-right-radius: 30px;
-    border-bottom-right-radius: 30px;
+    border: 3px solid #2d525e;
+    border-radius: 1rem;
+    box-shadow: 0.5rem 0.5rem 2rem rgba(0, 0, 0, 0.342);
+    width: 47%;
+    height: 60vh;
     padding: 3rem;
     display: flex;
     align-items: flex-start;
@@ -207,185 +488,831 @@ button:hover{
 
 .subtitulo{
     font-size: 3rem;
-    color: white;
+    color: #324E50;
     font-family: 'Nunito', sans-serif;
 }
 
-h2{
-    position: absolute;
-    padding: 4rem;
-    font-size: 1.5rem;
-    color: white;
-    font-family: 'Poppins', sans-serif;
-    font-weight: lighter;
-}
 
 .parrafo{
     position: absolute;
-    color: white;
+    color: #324E50;
     padding: 6rem;
     font-family: 'Poppins', sans-serif;
     font-size: 0.9rem;
 }
 
-.contenedor-3{
-    background-color: #324E50;
+.imagen-reciclaje{
+    width: 45vw;
+    height: 60vh;
+    background-image: url(/RECURSOS/maquina\ de\ ladrillos-02.svg);
+    background-repeat: no-repeat;
+    background-size: 30rem;
+    background-position-x: center;
+    background-position-y: center;
+
+}
+/* Fin Seccion reciclaje*/
+
+/* Seccion Sabias que?*/
+
+.card-list2 {
+    display: flex;
+    padding: 10%;
 }
 
-.sabiasque{
-    padding: 3rem;
+.card2 {
+    height: 20rem;
+    width: 100%;
+    padding: 1.5rem;
+    border-radius: 16px;
+    background: white;
+    box-shadow: 0.3rem 0.5rem 1.5rem #324e5046;
+    display: flex;
+    flex-direction: column;
+    transition: .2s;
+    margin: 0;
+    scroll-snap-align: start;
+    clear: both;
+    position: relative;
+}
+.card2-1{
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    background-image: url(/RECURSOS/collage.png);
+    background-size: 23rem;
+    background-position-x: center;
+    background-repeat: no-repeat;
+}
+.card2-2{
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    background-image: url(/RECURSOS/GRUPO\ 1\ -\ MAPEO\ COLECTIVO\ \(1\).jpg);
+    background-size: 23rem;
+    background-position-x: center;
+    background-repeat: no-repeat;
+}
+.card2-3{
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    background-image: url(/RECURSOS/MIDAS\ GRUPO\ 1.png);
+    background-size: 30rem;
+    background-position-x: center;
+    background-repeat: no-repeat;
+}
+
+.card2:focus-within~.card2, .card2:hover~.card2 {
+    transform: translateX(9rem);
+}
+
+.card2:hover {
+    background-color: white;
+    transform: translatex(1rem) scale(1.5);
+    z-index: 1;
+}
+
+.card2:not(:first-child) {
+    margin-left: -130px;
+}
+
+
+.curiosidades{
+    padding: 1rem;
     display: flex;
     align-items: flex-start;
     justify-content: center;
     gap: 1rem;
 }
 
-.titulo-tarjetas {
-    color: #324E50;
-    font-family: 'Poppins', sans-serif;
-    font-size: 1.5rem;
-}
-
-.texto{
-    text-align: left;
-    font-size: 0.7rem;
-    color: #324E50;
-    font-family: 'Poppins', sans-serif;
-}
-
-.tarjetas{
+.card-list {
     display: flex;
-    justify-content: center;
-    padding: 4rem;
-    gap: 2.8rem;
+    padding: 1.5rem;
 }
 
-.tarjeta{
-    text-align: center;
-    width: 17rem;
-    height: 20rem;
-    padding: 1.5rem;
-    background-color: white;
-    border-radius: 1rem;
+.card {
+    height: 28rem;
+    width: 23rem;
+    padding: 1rem;
+    border-radius: 16px;
+    background: #ececec;
+    box-shadow: 0.3rem 0.5rem 1.5rem #324e5046;
+    display: flex;
+    flex-direction: column;
+    transition: .2s;
+    margin: 0;
+    scroll-snap-align: start;
+    clear: both;
     position: relative;
 }
 
-
-.contenedor-4{
-    display: flex;
-    height: 100vh;
+.card:focus-within~.card, .card:hover~.card {
+    transform: translateX(9rem);
 }
 
-.campana{
-    background-color: #2D525E;
-    width: 70vw;
-    height: 100vh;
-    margin-left: 30vw;
-    border-top-left-radius: 30px;
-    border-bottom-left-radius: 30px;
-    padding: 3rem;
-    display: flex;
-    align-items: flex-start;
-    justify-content: center;
-    gap: 1rem;
+.card:hover {
+    background-color: white;
+    transform: translateY(-1.5rem);
 }
 
-.contenedor-5{
-    background-color: #324E50;
+.card:not(:first-child) {
+    margin-left: -130px;
+}
+.imagen-card1{
+    width: 100%;
+    height: 8rem;
+    margin-top: 2rem;
+    background: url(/RECURSOS/casa.svg);
+    background-size: 8rem;
+    background-repeat: no-repeat;
+    background-position-x: center;
+}
+.imagen-card2{
+    width: 100%;
+    height: 8rem;
+    margin-top: 2rem;
+    background: url(/RECURSOS/maleta.svg);
+    background-size: 8rem;
+    background-repeat: no-repeat;
+    background-position-x: center;
+}
+.imagen-card3{
+    width: 100%;
+    height: 8rem;
+    margin-top: 2rem;
+    background: url(/RECURSOS/Icono\ 3.svg);
+    background-size: 8rem;
+    background-repeat: no-repeat;
+    background-position-x: center;
+}
+.imagen-card4{
+    width: 100%;
+    height: 8rem;
+    margin-top: 2rem;
+    background: url(/RECURSOS/basurero.svg);
+    background-size: 8rem;
+    background-repeat: no-repeat;
+    background-position-x: center;
+}
+.imagen-card5{
+    width: 100%;
+    height: 8rem;
+    margin-top: 2rem;
+    background: url(/RECURSOS/flechas\ reciclaje.svg);
+    background-size: 8rem;
+    background-repeat: no-repeat;
+    background-position-x: center;
+}
+.imagen-card6{
+    width: 100%;
+    height: 8rem;
+    margin-top: 2rem;
+    background: url(/RECURSOS/nube\ co2.svg);
+    background-size: 8rem;
+    background-repeat: no-repeat;
+    background-position-x: center;
 }
 
-.emac{
-    padding: 3rem;
-    display: flex;
-    align-items: flex-start;
-    justify-content: center;
-    gap: 1rem;
-}
 
-.footer {
-    padding: 2rem;
-}
-
-.footer_links {
-    list-style: none;
-    margin: 0;
-    padding: 0;
+.titulo-tarjetas {
+    color: #00BF8D;
+    font-size: 1.2rem;
     text-align: center;
 }
 
-.footer_link {
-    display: inline-block;
-    margin: 0 16px;
+.texto,
+.texto-1{
+    margin: 1rem;
+    text-align: left;
+    font-size: 0.8rem;
+    color: #324E50;
     font-family: 'Poppins', sans-serif;
 }
+/* Fin Seccion sabias qué?*/
 
-.footer_link a {
-    color: #324E50;
-    text-decoration: none;
+/* Seccion Campaña*/
+
+.contenedor-4{
+    display: flex;
+    margin-top: 5rem;
+    padding: 1.5rem;
 }
 
-.footer_link a:hover,
-.footer_link a:active {
-    color: black;
+.infografias{    
+    width: 45vw;
+    height: 50vh;
+    background-repeat: no-repeat;
+    background-size: 18rem;
+    background-position-x: center;
+    background-position-y: center;
+    background-image: url(/RECURSOS/ladrillos-02.svg);
+}
+.campana {
+    border: 3px solid #2d525e;
+    border-radius: 1rem;
+    box-shadow: 0.5rem 0.5rem 2rem rgba(0, 0, 0, 0.342);
+    width: 45vw;
+    height: 50vh;
+    margin-left: 2rem;
+    padding: 3rem;
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    gap: 1rem;
 }
 
-/* tablet */
+/* Fin Seccion Campaña*/
 
-@media screen and (max-width : 500px){
-    .boton1{
-        margin-top: 5rem;
+/* Seccion Emac*/
+.contenedor-5{
+    margin: 3%;
+}
+
+.emac{
+    padding: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+}
+
+.tarjetas{
+    width: 100%;
+    height: 70vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+    perspective: 2000px;
+    overflow: hidden;
+}
+
+.tarjeta{
+    width: 22rem;
+    height: 25rem;
+    border-radius: 1rem;
+    position: relative;
+    perspective: 2000px;
+    transform-style: preserve-3d;
+}
+
+.tarjeta:hover {
+    transform: scale(1.1);
+}
+
+
+.tarjeta:hover .lado-A{
+    background-color: white;
+    transition-delay: .3s;
+    transform: rotateY(180deg);
+    box-shadow: 0.3rem 0.3rem 0.5rem rgba(0, 0, 0, 0.2);
+}
+
+.tarjeta:hover .lado-B{
+    transition-delay: .3s;
+    transform: rotateY(360deg);
+    box-shadow: 0.3rem 0.3rem 0.5rem rgba(0, 0, 0, 0.2);
+}
+
+[class*="lado"]{
+     width: 100%;
+     height: 100%;
+     border-radius: 1rem;
+     padding: 2rem;
+     position: absolute;
+     top: 0;
+     left: 0;
+     backface-visibility: hidden;
+     transition: transform 1s;
+}
+
+.lado-A-1{
+    background: linear-gradient(to bottom, rgba(255, 255, 255, 0.9) 65%, transparent), url(/img/1.png);
+    background-size: 660px;
+}
+.lado-A-2{
+    background: linear-gradient(to bottom, rgba(255, 255, 255, 0.9) 65%, transparent), url(/img/2.png);
+    background-position: right;
+    background-size: 630px;
+}
+.lado-A-3{
+    background: linear-gradient(to bottom, rgba(255, 255, 255, 0.9) 65%, transparent), url(/img/3.jpeg);
+    background-position: center;
+    background-size: 400px;
+}
+
+.lado-A{
+    background-color: #c0c0c0;
+    text-align: center;
+}
+
+.lado-B{
+    transform: rotateY(180deg);
+    background-color: white;
+}
+.lado-B h1{
+    text-align: center;
+    margin-top: 0;
+}
+
+.imagen-emac1{
+    width: 100%;
+    margin: 1.5rem 0;
+    height: 7rem;
+    background-image: url(/RECURSOS/izquierdo.svg);
+    background-size: 10rem;
+    background-repeat: no-repeat;
+    background-position-x: center;
+}
+.imagen-emac2{
+    width: 100%;
+    margin: 1.5rem 0;
+    height: 7rem;
+    background-image: url(/RECURSOS/Centro.svg);
+    background-size: 10rem;
+    background-repeat: no-repeat;
+    background-position-x: center;
+}
+.imagen-emac3{
+    width: 100%;
+    margin: 1.5rem 0;
+    height: 7rem;
+    background-image: url(/RECURSOS/derecho.svg);
+    background-size: 10rem;
+    background-repeat: no-repeat;
+    background-position-x: center;
+}
+
+/* Fin Seccion emac*/
+
+/* Seccion footer*/
+
+.footer {
+    background-color: #324E50;
+    padding: 1rem;
+}
+.footer-contenedor {
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-start;
+    gap: 3rem;
+    padding: 5%;
+}
+
+.footer-titulo{
+    font-size: 1rem;
+    color: #00BF8D;
+    text-align: center;
+
+}
+.fotter-texto {
+    text-align: center;
+    font-size: 0.8rem;
+    color: white;
+}
+
+
+
+/* Fin fotter*/
+
+/* Mediaqueries Tablet*/
+
+@media screen and (max-width : 900px) {
+    #header .nav-menu {
+        margin-left: 85%;
     }
 
-    .reciclaje{
-        width: 500px;
-        height: 50vh;
-        border-top-right-radius: 0;
-        border-bottom-left-radius: 30px;
-        border-bottom-right-radius: 30px;
+    .titulo-principal{
+        font-size: 3rem;
     }
-    .campana{
-        width: 500px;
-        height: 50vh;
-        border-top-left-radius: 0;
-        border-bottom-left-radius: 30px;
-        border-bottom-right-radius: 30px;
-        margin-left: 0;
-    }
-
-    .numero,
-    .subtitulo{
+    
+    .titulo-principal-2{
         font-size: 2.5rem;
     }
 
-    .parrafo{
-        font-size: 0.7rem;
-        width: 36rem;
-        height: 15.5rem;
-        overflow-y: hidden;
+    .contenedor-1{
+        width: auto;
+        height: 700px;
+        padding: 0;
+        margin-top: 10%;
+        background-position-x: center;
+        background-position-y: center;
+        background-size: 260px;
+        background-repeat: no-repeat;
     }
 
+    .boton1{
+        margin-top: 40%;
+    }
+
+    .proyecto{
+        width: auto;
+        display: flex;
+        align-items: center;
+    }
+    
+    .testimonial__image-container {
+        align-items: center;
+        display: flex;
+        width: auto;
+        height: 25%;
+        margin: 5%;
+    }
+       
+    .testimonial__info {
+        align-items: center;
+        margin: 5%;
+        padding: 1rem;
+        width: auto;
+        height: auto;
+    }
+
+    .metodologias{
+        width: auto;
+        height: auto;
+    }
+    .metodologia-titulo{
+        font-size: 2.5rem;
+    }
+    
+    .metodologia{
+        margin: 10%;
+        display: inline-block
+    }
+    
+    .metodologia-cards{
+        width: 100%;
+        height: auto;
+        margin: 10% 0;
+    
+    }
+
+    .contenedor-2{
+        width: auto;
+        padding: 0;
+        margin: 5%;
+    }
+    
+    .imagen-reciclaje{
+        width: 900px;
+        height: auto;
+        background-size: 20rem;
+        background-position-x: right;
+    }
+
+    .contenedor-4{
+        width: auto;
+        padding: 0;
+        margin: 5%;
+    }
+    
+    .infografias{
+        width: 900px;
+        height: auto;
+        background: url(/RECURSOS/ladrillos-02.svg);
+        background-size: 18rem;
+        background-repeat: no-repeat;
+        background-position-x: center;
+    }
+    .campana {
+        width: auto;
+        height: 320px;
+        margin: 0;
+        padding: 2rem;
+    }
+
+    .reciclaje{
+        width: auto;
+        height: 450px;
+        margin: 0;
+        padding: 2rem;
+    }
+
+    .parrafo{
+        font-size: 0.8rem;
+        margin: 9%;
+        width: auto;
+        height: 380px;
+        padding: 1rem;
+    }
+    .contenedor-5{
+        margin: 25%;
+    }
+
+    .emac{
+        width: auto;
+    }
+    
     .tarjetas{
+        width: auto;
+        height: auto;
         display: inline-block;
+        padding: 2.5rem;
+        gap:0;
+        perspective: 3000px;
     }
     
     .tarjeta{
-        margin: 2rem;
-        width: 17rem;
-        height: 10rem;
-    }
-
-    .titulo-tarjetas {
-        font-size: 1rem;
+        width: 330px;
+        height: 28rem;
+        margin: 4rem 0;
     }
     
-    .texto{
-        display: none;
+    .contenedor-3 {
+        width: auto;
+        margin: 5rem 15%;
     }
+    
+    .curiosidades{
+        width: auto;
+        margin: 2rem 0;
+    }
+    
+    
+    .card-list {
+        width:auto;
+        display: inline-block;
+        padding: 0;
+        height: auto;
+        margin: 5rem 0;
+    }
+    
+    .card {
+        height: auto;
+        width: 500px;
+        padding: 1.5rem;
+        margin: -6rem 3rem;
+    }
+
+    .card:focus-within~.card, .card:hover~.card {
+        transform: none;
+    }
+    
+    .card:hover {
+        transform: translateY(-6rem);
+    }
+    
+    .card:not(:first-child) {
+        margin-left: 3rem;
+    }
+
+    .card2 {
+        height: 15rem;
+    }
+    .card2-1{
+        background-size: 17rem;
+    }
+    .card2-2{
+        background-size: 16rem;
+    }
+    .card2-3{
+        background-size: 20rem;
+    }
+
+    .texto,
+    .texto-1{
+    font-size: 0.9rem;
 }
 
-@media screen and (max-width : 50rem) {
+}
+
+
+/* Mediaqueries Movil */
+
+@media screen and (max-width : 500px){
+    #header .nav-menu {
+        margin-left: 80%;
+    }
+
+    .contenedor-1{
+        width: auto;
+        height: 500px;
+        padding: 0;
+        margin-top: 10%;
+        background-position-x: center;
+        background-position-y: bottom;
+        background-size: 300px;
+        background-repeat: no-repeat;
+    }
+
+    .titulo-principal{
+        width: auto;
+        font-size: 1.8rem;
+    }
+    
+    .titulo-principal-2{
+        width: auto;
+        font-size: 1.5rem;
+    }
+
+    .boton1{
+        margin-top: 1.5rem;
+    }
+    button {
+        margin-bottom: 5rem;
+    }
+
+    .numero,
+    .subtitulo {
+        font-size: 2.3rem;
+    }
+
+    .proyecto{
+        width: auto;
+        display: flex;
+        align-items: center;
+    }
+    
+    .testimonial__image-container {
+        display: flex;
+        width: auto;
+        height: 25%;
+        margin: 5%;
+    }
+    
+    .testimonial__info {
+        margin: 5%;
+        padding: 1rem;
+        width: auto;
+        height: auto;
+    }
+
+    .metodologias{
+        width: auto;
+        height: auto;
+    }
+    .metodologia-titulo{
+        font-size: 2.5rem;
+    }
+    
+    .metodologia{
+        margin: 5%;
+        display: inline-block
+    }
+    
+    .metodologia-cards{
+        width: 100%;
+        height: auto;
+        margin: 10% 0;
+    
+    }
+    
+    .metodologia-texto {
+        font-size: 0.7rem;
+    }
+
+    .contenedor-2{
+        display: inline-block;
+        width: auto;
+        padding: 0;
+        margin: 5%;
+    }
+    
+    .imagen-reciclaje{
+        width: auto;
+        height: 300px;
+        background-size: 20rem;
+        background-position-x: center;
+    }
+
+    .contenedor-4{
+        display: inline-block;
+        width: auto;
+        padding: 0;
+        margin: 5%;
+    }
+    
+    .infografias{
+        width: auto;
+        height: 300px;
+        background-size: 17rem;
+        background-repeat: no-repeat;
+        background-position-x: center;
+    }
+    .campana {
+        width:400px;
+        height: 260px;
+        margin: 1rem;
+        padding: 2rem;
+    }
+
+    .reciclaje{
+        width: 400px;
+        height: 380px;
+        margin: 1rem;
+        padding: 2rem;
+    }
+
     .parrafo{
-        width: 30rem;
+        margin: 10%;
+        width: auto;
+        height: 280px;
+        padding: 1rem;
+        font-size: 0.8rem;
+        overflow-y: hidden;
+    }
+
+    .contenedor-5{
+        margin: 0;
+        width: auto;
+    }
+    .emac{
+        width: auto;
+    }
+    
+    .tarjetas{
+        width: 450px;
+        height: auto;
+        display: inline-block;
+        padding: 2.5rem;
+        gap:0;
+        perspective: 3000px;
+        overflow: hidden;
+    }
+    
+    .tarjeta{
+        width: 330px;
+        height: 20rem;
+        margin: 4rem 12%;
+    }
+
+    .texto{
+        font-size: 0.7rem;
+    }
+
+    .texto-1{
+        display: none;
+    }
+    
+
+    .contenedor-3 {
+        width: auto;
+        margin: 5rem 0;
+    }
+    
+    .curiosidades{
+        width: auto;
+        margin: 5rem 0;
+    }
+    
+    
+    .card-list {
+        width: auto;
+        display: inline-block;
+        padding: 0;
+        height: auto;
+        margin: 5rem 0;
+    }
+    
+    .card {
+        height: auto;
+        width: 320px;
+        padding: 1.5rem;
+        margin: -6rem 28%;
+    }
+
+    .card:focus-within~.card, .card:hover~.card {
+        transform: none;
+    }
+    
+    .card:hover {
+        transform: translateY(-6rem);
+    }
+    
+    .card:not(:first-child) {
+        margin-left: 28%;
+    }
+
+    .card2 {
+        height: 12rem;
+    }
+    .card2-1{
+        background-size: 13rem;
+    }
+    .card2-2{
+        background-size: 11rem;
+    }
+    .card2-3{
+        background-size: 15rem;
+    }
+
+    .footer {
+        padding: 2rem 5rem;
+
+    }
+
+    .footer-contenedor{
+        gap: 1.1rem;
+    }
+
+    .tarjeta{
+        height: 21rem;
+    }
+
+    .fotter-texto{
+        margin: 0.5rem;
+        font-size: 0.7rem;
     }
 
 }

@@ -472,7 +472,7 @@ button:hover{
     border-radius: 1rem;
     box-shadow: 0.5rem 0.5rem 2rem rgba(0, 0, 0, 0.342);
     width: 47%;
-    height: 60vh;
+    height: 85vh;
     padding: 3rem;
     display: flex;
     align-items: flex-start;
@@ -713,7 +713,7 @@ button:hover{
     border-radius: 1rem;
     box-shadow: 0.5rem 0.5rem 2rem rgba(0, 0, 0, 0.342);
     width: 45vw;
-    height: 50vh;
+    height: 60vh;
     margin-left: 2rem;
     padding: 3rem;
     display: flex;
@@ -1170,7 +1170,7 @@ button:hover{
     }
     
     .imagen-reciclaje{
-        width: 390px;
+        width: auto;
         height: 300px;
         background-size: 20rem;
         background-position-x: center;
@@ -1185,7 +1185,7 @@ button:hover{
     }
     
     .infografias{
-        width: 390px;
+        width: auto;
         height: 300px;
         background-size: 15rem;
         background-repeat: no-repeat;
@@ -1193,13 +1193,13 @@ button:hover{
         margin: 5%;
     }
     .campana {
-        width: 390px;
+        width: auto;
         height: 260px;
         margin: 5%;
     }
 
     .reciclaje{
-        width: 390px;
+        width: auto;
         height: 390px;
         margin: 5%;
     }
@@ -1223,7 +1223,7 @@ button:hover{
     }
     
     .tarjetas{
-        width: 360px;
+        width: auto;
         height: auto;
         display: inline-block;
         padding: 0;
@@ -1236,7 +1236,7 @@ button:hover{
     .tarjeta{
         width: 300px;
         height: 20rem;
-        margin: 12%;
+        margin: 10%;
     }
 
     .texto{

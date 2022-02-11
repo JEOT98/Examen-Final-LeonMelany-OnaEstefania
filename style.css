@@ -447,15 +447,17 @@ button:hover{
 
 .metodologia-cards{
     width: 33%;
-    height: 25rem;
+    height: auto;
     padding: 2rem;
     box-shadow: 3px 3px 5px 3px rgba(0, 0, 0, 0.3);
+    overflow-y: hidden;
 
 }
 
 .metodologia-texto {
     font-size: 0.9rem;
     margin: 3rem 0;
+    padding-bottom: 1.5rem;
 }
 
 
@@ -592,7 +594,7 @@ button:hover{
 }
 
 .card {
-    height: 28rem;
+    height: auto;
     width: 23rem;
     padding: 1rem;
     border-radius: 16px;
@@ -994,7 +996,7 @@ button:hover{
         margin: 9%;
         width: auto;
         height: 380px;
-        padding: 1rem;
+        padding: 0 3rem;
     }
     .contenedor-5{
         margin: 17%;
@@ -1194,20 +1196,20 @@ button:hover{
     }
     .campana {
         width: 340px;
-        height: 300px;
+        height: 330px;
         margin: 5%;
     }
 
     .reciclaje{
         width: 340px;
-        height: 400px;
+        height: 410px;
         margin: 5%;
     }
 
     .parrafo{
         margin: 10%;
         width: auto;
-        height: 385px;
+        height: 300px;
         padding: 1rem;
         font-size: 0.8rem;
         overflow-y: hidden;

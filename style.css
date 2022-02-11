@@ -1171,7 +1171,7 @@ button:hover{
     
     .imagen-reciclaje{
         width: auto;
-        height: 300px;
+        height: 340px;
         background-size: 20rem;
         background-position-x: center;
         margin: 5%;
@@ -1186,28 +1186,28 @@ button:hover{
     
     .infografias{
         width: auto;
-        height: 300px;
+        height: 340px;
         background-size: 15rem;
         background-repeat: no-repeat;
         background-position-x: center;
         margin: 5%;
     }
     .campana {
-        width: auto;
-        height: 260px;
+        width: 340px;
+        height: 300px;
         margin: 5%;
     }
 
     .reciclaje{
-        width: auto;
-        height: 390px;
+        width: 340px;
+        height: 400px;
         margin: 5%;
     }
 
     .parrafo{
         margin: 10%;
         width: auto;
-        height: 280px;
+        height: 385px;
         padding: 1rem;
         font-size: 0.8rem;
         overflow-y: hidden;
@@ -1223,14 +1223,14 @@ button:hover{
     }
     
     .tarjetas{
-        width: auto;
+        width: 350px;
         height: auto;
         display: inline-block;
+        margin: 0;
         padding: 0;
         gap:0;
         perspective: 3000px;
         overflow: hidden;
-        margin: 5%;
     }
     
     .tarjeta{

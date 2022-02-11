@@ -177,7 +177,7 @@ body::-webkit-scrollbar-thumb:hover {
 .contenedor-1{
     height: 100vh;
     padding: 3rem;
-    background-image: url(/RECURSOS/botella\ y\ planeta.svg);
+    background-image: url(RECURSOS/botella\ y\ planeta.svg);
     background-position-x: 90%;
     background-position-y: center;
     background-size: 25rem;
@@ -504,7 +504,7 @@ button:hover{
 .imagen-reciclaje{
     width: 45vw;
     height: 60vh;
-    background-image: url(/RECURSOS/maquina\ de\ ladrillos-02.svg);
+    background-image: url(RECURSOS/maquina\ de\ ladrillos-02.svg);
     background-repeat: no-repeat;
     background-size: 30rem;
     background-position-x: center;
@@ -539,7 +539,7 @@ button:hover{
     width: 100%;
     height: 100%;
     margin: 0;
-    background-image: url(/RECURSOS/collage.png);
+    background-image: url(RECURSOS/collage.png);
     background-size: 23rem;
     background-position-x: center;
     background-repeat: no-repeat;
@@ -548,7 +548,7 @@ button:hover{
     width: 100%;
     height: 100%;
     margin: 0;
-    background-image: url(/RECURSOS/GRUPO\ 1\ -\ MAPEO\ COLECTIVO\ \(1\).jpg);
+    background-image: url(RECURSOS/GRUPO\ 1\ -\ MAPEO\ COLECTIVO\ \(1\).jpg);
     background-size: 23rem;
     background-position-x: center;
     background-repeat: no-repeat;
@@ -557,7 +557,7 @@ button:hover{
     width: 100%;
     height: 100%;
     margin: 0;
-    background-image: url(/RECURSOS/MIDAS\ GRUPO\ 1.png);
+    background-image: url(RECURSOS/MIDAS\ GRUPO\ 1.png);
     background-size: 30rem;
     background-position-x: center;
     background-repeat: no-repeat;
@@ -623,7 +623,7 @@ button:hover{
     width: 100%;
     height: 8rem;
     margin-top: 2rem;
-    background: url(/RECURSOS/casa.svg);
+    background: url(RECURSOS/casa.svg);
     background-size: 8rem;
     background-repeat: no-repeat;
     background-position-x: center;
@@ -632,7 +632,7 @@ button:hover{
     width: 100%;
     height: 8rem;
     margin-top: 2rem;
-    background: url(/RECURSOS/maleta.svg);
+    background: url(RECURSOS/maleta.svg);
     background-size: 8rem;
     background-repeat: no-repeat;
     background-position-x: center;
@@ -641,7 +641,7 @@ button:hover{
     width: 100%;
     height: 8rem;
     margin-top: 2rem;
-    background: url(/RECURSOS/Icono\ 3.svg);
+    background: url(RECURSOS/Icono\ 3.svg);
     background-size: 8rem;
     background-repeat: no-repeat;
     background-position-x: center;
@@ -650,7 +650,7 @@ button:hover{
     width: 100%;
     height: 8rem;
     margin-top: 2rem;
-    background: url(/RECURSOS/basurero.svg);
+    background: url(RECURSOS/basurero.svg);
     background-size: 8rem;
     background-repeat: no-repeat;
     background-position-x: center;
@@ -659,7 +659,7 @@ button:hover{
     width: 100%;
     height: 8rem;
     margin-top: 2rem;
-    background: url(/RECURSOS/flechas\ reciclaje.svg);
+    background: url(RECURSOS/flechas\ reciclaje.svg);
     background-size: 8rem;
     background-repeat: no-repeat;
     background-position-x: center;
@@ -668,7 +668,7 @@ button:hover{
     width: 100%;
     height: 8rem;
     margin-top: 2rem;
-    background: url(/RECURSOS/nube\ co2.svg);
+    background: url(RECURSOS/nube\ co2.svg);
     background-size: 8rem;
     background-repeat: no-repeat;
     background-position-x: center;
@@ -706,7 +706,7 @@ button:hover{
     background-size: 18rem;
     background-position-x: center;
     background-position-y: center;
-    background-image: url(/RECURSOS/ladrillos-02.svg);
+    background-image: url(RECURSOS/ladrillos-02.svg);
 }
 .campana {
     border: 3px solid #2d525e;
@@ -820,7 +820,7 @@ button:hover{
     width: 100%;
     margin: 1.5rem 0;
     height: 7rem;
-    background-image: url(/RECURSOS/izquierdo.svg);
+    background-image: url(RECURSOS/izquierdo.svg);
     background-size: 10rem;
     background-repeat: no-repeat;
     background-position-x: center;
@@ -829,7 +829,7 @@ button:hover{
     width: 100%;
     margin: 1.5rem 0;
     height: 7rem;
-    background-image: url(/RECURSOS/Centro.svg);
+    background-image: url(RECURSOS/Centro.svg);
     background-size: 10rem;
     background-repeat: no-repeat;
     background-position-x: center;
@@ -838,7 +838,7 @@ button:hover{
     width: 100%;
     margin: 1.5rem 0;
     height: 7rem;
-    background-image: url(/RECURSOS/derecho.svg);
+    background-image: url(RECURSOS/derecho.svg);
     background-size: 10rem;
     background-repeat: no-repeat;
     background-position-x: center;
@@ -970,7 +970,7 @@ button:hover{
     .infografias{
         width: 900px;
         height: auto;
-        background: url(/RECURSOS/ladrillos-02.svg);
+        background: url(RECURSOS/ladrillos-02.svg);
         background-size: 18rem;
         background-repeat: no-repeat;
         background-position-x: center;

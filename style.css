@@ -951,27 +951,27 @@ button:hover{
     .contenedor-2{
         width: auto;
         padding: 0;
-        margin: 5%;
+        margin: 10%;
     }
     
     .imagen-reciclaje{
         width: 900px;
         height: auto;
-        background-size: 20rem;
+        background-size: 15rem;
         background-position-x: right;
     }
 
     .contenedor-4{
         width: auto;
         padding: 0;
-        margin: 5%;
+        margin: 10%;
     }
     
     .infografias{
         width: 900px;
         height: auto;
         background: url(RECURSOS/ladrillos-02.svg);
-        background-size: 18rem;
+        background-size: 15rem;
         background-repeat: no-repeat;
         background-position-x: center;
     }
@@ -997,7 +997,7 @@ button:hover{
         padding: 1rem;
     }
     .contenedor-5{
-        margin: 25%;
+        margin: 17%;
     }
 
     .emac{
@@ -1016,12 +1016,12 @@ button:hover{
     .tarjeta{
         width: 330px;
         height: 28rem;
-        margin: 4rem 0;
+        margin: 10%;
     }
     
     .contenedor-3 {
         width: auto;
-        margin: 5rem 15%;
+        margin: 10%;
     }
     
     .curiosidades{
@@ -1098,12 +1098,12 @@ button:hover{
 
     .titulo-principal{
         width: auto;
-        font-size: 1.8rem;
+        font-size: 1.3rem;
     }
     
     .titulo-principal-2{
         width: auto;
-        font-size: 1.5rem;
+        font-size: 1rem;
     }
 
     .boton1{
@@ -1174,6 +1174,7 @@ button:hover{
         height: 300px;
         background-size: 20rem;
         background-position-x: center;
+        margin: 5%;
     }
 
     .contenedor-4{
@@ -1189,16 +1190,19 @@ button:hover{
         background-size: 17rem;
         background-repeat: no-repeat;
         background-position-x: center;
+        margin: 5%;
     }
     .campana {
-        width:400px;
+        margin: 5%;
+        width: auto;
         height: 260px;
         margin: 1rem;
         padding: 2rem;
     }
 
     .reciclaje{
-        width: 400px;
+        margin: 5%;
+        width: auto;
         height: 380px;
         margin: 1rem;
         padding: 2rem;
@@ -1214,7 +1218,7 @@ button:hover{
     }
 
     .contenedor-5{
-        margin: 0;
+        margin: 5%;
         width: auto;
     }
     .emac{
@@ -1222,7 +1226,7 @@ button:hover{
     }
     
     .tarjetas{
-        width: 450px;
+        width: auto;
         height: auto;
         display: inline-block;
         padding: 2.5rem;
@@ -1234,7 +1238,7 @@ button:hover{
     .tarjeta{
         width: 330px;
         height: 20rem;
-        margin: 4rem 12%;
+        margin: 5%;
     }
 
     .texto{
@@ -1267,9 +1271,9 @@ button:hover{
     
     .card {
         height: auto;
-        width: 320px;
+        width: auto;
         padding: 1.5rem;
-        margin: -6rem 28%;
+        margin: 5%;
     }
 
     .card:focus-within~.card, .card:hover~.card {
@@ -1281,7 +1285,7 @@ button:hover{
     }
     
     .card:not(:first-child) {
-        margin-left: 28%;
+        margin-left: 5%;
     }
 
     .card2 {

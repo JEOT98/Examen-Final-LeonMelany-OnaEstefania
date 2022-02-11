@@ -1014,7 +1014,7 @@ button:hover{
     }
     
     .tarjeta{
-        width: 330px;
+        width: 400px;
         height: 28rem;
         margin: 10%;
     }
@@ -1042,7 +1042,7 @@ button:hover{
         height: auto;
         width: 500px;
         padding: 1.5rem;
-        margin: -6rem 3rem;
+        margin: -6rem 4rem;
     }
 
     .card:focus-within~.card, .card:hover~.card {
@@ -1054,7 +1054,7 @@ button:hover{
     }
     
     .card:not(:first-child) {
-        margin-left: 3rem;
+        margin-left: 4rem;
     }
 
     .card2 {
@@ -1098,12 +1098,12 @@ button:hover{
 
     .titulo-principal{
         width: auto;
-        font-size: 1.3rem;
+        font-size: 1.5rem;
     }
     
     .titulo-principal-2{
         width: auto;
-        font-size: 1rem;
+        font-size: 1.3rem;
     }
 
     .boton1{
@@ -1170,7 +1170,7 @@ button:hover{
     }
     
     .imagen-reciclaje{
-        width: auto;
+        width: 340px;
         height: 300px;
         background-size: 20rem;
         background-position-x: center;
@@ -1185,27 +1185,23 @@ button:hover{
     }
     
     .infografias{
-        width: auto;
+        width: 340px;
         height: 300px;
-        background-size: 17rem;
+        background-size: 15rem;
         background-repeat: no-repeat;
         background-position-x: center;
         margin: 5%;
     }
     .campana {
-        margin: 5%;
-        width: auto;
+        width: 340px;
         height: 260px;
-        margin: 1rem;
-        padding: 2rem;
+        margin: 5%;
     }
 
     .reciclaje{
+        width: 340px;
+        height: 390px;
         margin: 5%;
-        width: auto;
-        height: 380px;
-        margin: 1rem;
-        padding: 2rem;
     }
 
     .parrafo{
@@ -1223,22 +1219,23 @@ button:hover{
     }
     .emac{
         width: auto;
+        margin: 5%;
     }
     
     .tarjetas{
-        width: auto;
+        width: 350px;
         height: auto;
         display: inline-block;
-        padding: 2.5rem;
+        padding: 0;
         gap:0;
         perspective: 3000px;
         overflow: hidden;
     }
     
     .tarjeta{
-        width: 330px;
+        width: 300px;
         height: 20rem;
-        margin: 5%;
+        margin: 10%;
     }
 
     .texto{
@@ -1273,7 +1270,7 @@ button:hover{
         height: auto;
         width: auto;
         padding: 1.5rem;
-        margin: 5%;
+        margin: -15% 5%;
     }
 
     .card:focus-within~.card, .card:hover~.card {

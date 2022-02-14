@@ -1,7 +1,6 @@
 /* font-family: 'Nunito', sans-serif;
 font-family: 'Poppins', sans-serif; 
 colores : #00BF8D #2d525e #324E50*/
- 
 
 *{
     margin: 0;
@@ -93,7 +92,7 @@ body::-webkit-scrollbar-thumb:hover {
 	left: 50%;
 	transform: translate(-50%, -50%) scale(0);
 	color: rgba(240, 248, 255, 0.021);
-	font-size: 10rem;
+	font-size: 275%;
 	letter-spacing: 50px;
 	z-index: -1;
 	transition: 0.3s ease letter-spacing;
@@ -342,7 +341,7 @@ button:hover{
 /* Seccion Proyecto*/
 
 .proyecto{
-    padding: 3rem;
+    padding: 1rem;
     display: flex;
     align-items: flex-start;
     justify-content: center;
@@ -457,29 +456,26 @@ button:hover{
 .metodologia-texto {
     font-size: 0.9rem;
     margin: 3rem 0;
-    padding-bottom: 1.5rem;
 }
 
 
 /* Seccion Reciclaje*/
 .contenedor-2{
+    margin: 2rem;
     display: flex;
-    margin: 3%;
-    padding: 5% 0;
-    gap: 3%;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
 }
 
 .reciclaje{
     border: 3px solid #2d525e;
     border-radius: 1rem;
     box-shadow: 0.5rem 0.5rem 2rem rgba(0, 0, 0, 0.342);
-    width: 47%;
-    height: 85vh;
-    padding: 3rem;
-    display: flex;
-    align-items: flex-start;
-    justify-content: center;
-    gap: 1rem;
+    width: 50%;
+    height: auto;
+    padding: 1rem;
+    overflow-y: hidden;
 }
 
 .numero {
@@ -495,16 +491,8 @@ button:hover{
 }
 
 
-.parrafo{
-    position: absolute;
-    color: #324E50;
-    padding: 6rem;
-    font-family: 'Poppins', sans-serif;
-    font-size: 0.9rem;
-}
-
 .imagen-reciclaje{
-    width: 45vw;
+    width: 50%;
     height: 60vh;
     background-image: url(RECURSOS/maquina\ de\ ladrillos-02.svg);
     background-repeat: no-repeat;
@@ -517,9 +505,15 @@ button:hover{
 
 /* Seccion Sabias que?*/
 
+.contenedor-33{
+    width: auto;
+    height: auto;
+    margin: 2rem;
+}
+
 .card-list2 {
     display: flex;
-    padding: 10%;
+    padding: 5%;
 }
 
 .card2 {
@@ -579,6 +573,9 @@ button:hover{
     margin-left: -130px;
 }
 
+.contenedor-3{
+    width: auto;
+}
 
 .curiosidades{
     padding: 1rem;
@@ -696,13 +693,15 @@ button:hover{
 /* Seccion Campaña*/
 
 .contenedor-4{
+    margin: 2rem;
     display: flex;
-    margin-top: 5rem;
-    padding: 1.5rem;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
 }
 
 .infografias{    
-    width: 45vw;
+    width: 50%;
     height: 50vh;
     background-repeat: no-repeat;
     background-size: 18rem;
@@ -714,14 +713,10 @@ button:hover{
     border: 3px solid #2d525e;
     border-radius: 1rem;
     box-shadow: 0.5rem 0.5rem 2rem rgba(0, 0, 0, 0.342);
-    width: 45vw;
-    height: 60vh;
-    margin-left: 2rem;
-    padding: 3rem;
-    display: flex;
-    align-items: flex-start;
-    justify-content: center;
-    gap: 1rem;
+    width: 50%;
+    height: auto;
+    padding: 1rem;
+    overflow-y: hidden;
 }
 
 /* Fin Seccion Campaña*/
@@ -741,18 +736,17 @@ button:hover{
 
 .tarjetas{
     width: 100%;
-    height: 70vh;
+    height: 80vh;
     display: flex;
     justify-content: center;
     align-items: center;
     gap: 2rem;
     perspective: 2000px;
-    overflow: hidden;
 }
 
 .tarjeta{
     width: 22rem;
-    height: 25rem;
+    height: 27rem;
     border-radius: 1rem;
     position: relative;
     perspective: 2000px;
@@ -787,8 +781,8 @@ button:hover{
      left: 0;
      backface-visibility: hidden;
      transition: transform 1s;
-}
-
+    }
+    
 .lado-A-1{
     background: linear-gradient(to bottom, rgba(255, 255, 255, 0.9) 65%, transparent), url(/img/1.png);
     background-size: 660px;
@@ -807,11 +801,15 @@ button:hover{
 .lado-A{
     background-color: #c0c0c0;
     text-align: center;
+    box-shadow: 0.3rem 0.5rem 1.5rem #324e5046;
+    overflow-y: hidden;
 }
 
 .lado-B{
     transform: rotateY(180deg);
     background-color: white;
+    box-shadow: 0.3rem 0.5rem 1.5rem #324e5046;
+    overflow-y: hidden;
 }
 .lado-B h1{
     text-align: center;
@@ -905,7 +903,7 @@ button:hover{
     }
 
     .boton1{
-        margin-top: 40%;
+        margin-top: 43%;
     }
 
     .proyecto{
@@ -944,62 +942,57 @@ button:hover{
     }
     
     .metodologia-cards{
-        width: 100%;
+        width: auto;
         height: auto;
         margin: 10% 0;
     
     }
 
+    .numero,
+    .subtitulo {
+         font-size: 2rem;
+    }
+
+
     .contenedor-2{
         width: auto;
-        padding: 0;
-        margin: 10%;
+        margin: 5%;
     }
-    
-    .imagen-reciclaje{
-        width: 900px;
+       
+    .reciclaje{
+        width: 65%;
         height: auto;
+    }
+
+    .imagen-reciclaje{
+        width: 35%;
+        height: 20%;
+        padding: 6rem;
         background-size: 15rem;
-        background-position-x: right;
+        background-position-x: center;
     }
 
     .contenedor-4{
         width: auto;
-        padding: 0;
-        margin: 10%;
+        margin: 5%;
     }
     
     .infografias{
-        width: 900px;
-        height: auto;
-        background: url(RECURSOS/ladrillos-02.svg);
-        background-size: 15rem;
+        width: 35%;
+        height: 25%;
+        padding: 10rem;
+        background-size: 12rem;
         background-repeat: no-repeat;
         background-position-x: center;
     }
     .campana {
-        width: auto;
-        height: 320px;
-        margin: 0;
-        padding: 2rem;
+        width: 65%;
+        height: auto;
     }
 
-    .reciclaje{
-        width: auto;
-        height: 450px;
-        margin: 0;
-        padding: 2rem;
-    }
-
-    .parrafo{
-        font-size: 0.8rem;
-        margin: 9%;
-        width: auto;
-        height: 380px;
-        padding: 0 3rem;
-    }
     .contenedor-5{
-        margin: 17%;
+        margin: 5%;
+        width: auto;
     }
 
     .emac{
@@ -1007,23 +1000,21 @@ button:hover{
     }
     
     .tarjetas{
+        display: inline-block;
+        margin: 10% 25%; 
         width: auto;
         height: auto;
-        display: inline-block;
-        padding: 2.5rem;
-        gap:0;
-        perspective: 3000px;
     }
     
     .tarjeta{
+        margin: 15% 0;
         width: 400px;
         height: 28rem;
-        margin: 10%;
     }
     
     .contenedor-3 {
         width: auto;
-        margin: 10%;
+        margin: 5%;
     }
     
     .curiosidades{
@@ -1031,20 +1022,18 @@ button:hover{
         margin: 2rem 0;
     }
     
-    
     .card-list {
         width:auto;
         display: inline-block;
-        padding: 0;
         height: auto;
         margin: 5rem 0;
     }
     
     .card {
         height: auto;
-        width: 500px;
+        width: auto;
         padding: 1.5rem;
-        margin: -6rem 4rem;
+        margin: -6rem 10%;
     }
 
     .card:focus-within~.card, .card:hover~.card {
@@ -1056,7 +1045,7 @@ button:hover{
     }
     
     .card:not(:first-child) {
-        margin-left: 4rem;
+        margin-left: 10%;
     }
 
     .card2 {
@@ -1075,10 +1064,9 @@ button:hover{
     .texto,
     .texto-1{
     font-size: 0.9rem;
-}
+    }
 
 }
-
 
 /* Mediaqueries Movil */
 
@@ -1100,12 +1088,12 @@ button:hover{
 
     .titulo-principal{
         width: auto;
-        font-size: 1.7rem;
+        font-size: 1.5rem;
     }
     
     .titulo-principal-2{
         width: auto;
-        font-size: 1.5rem;
+        font-size: 1.3rem;
     }
 
     .boton1{
@@ -1117,7 +1105,7 @@ button:hover{
 
     .numero,
     .subtitulo {
-        font-size: 2.3rem;
+        font-size: 1.9rem;
     }
 
     .proyecto{
@@ -1129,12 +1117,12 @@ button:hover{
     .testimonial__image-container {
         display: flex;
         width: auto;
-        height: 25%;
-        margin: 5%;
+        height: auto;
+        margin: 3%;
     }
     
     .testimonial__info {
-        margin: 5%;
+        margin: 10%;
         padding: 1rem;
         width: auto;
         height: auto;
@@ -1154,7 +1142,7 @@ button:hover{
     }
     
     .metodologia-cards{
-        width: 100%;
+        width: auto;
         height: auto;
         margin: 10% 0;
     
@@ -1165,51 +1153,50 @@ button:hover{
     }
 
     .contenedor-2{
-        display: inline-block;
         width: auto;
-        padding: 0;
         margin: 5%;
+        display: inline-block;
     }
     
     .imagen-reciclaje{
         width: auto;
-        height: 340px;
-        background-size: 20rem;
+        height: 300px;
+        background-size: 18rem;
         background-position-x: center;
+        margin: 10%;
+    }
+    .reciclaje{
+        width: auto;
+        height: auto;
         margin: 5%;
+        padding: 0.3rem;
     }
 
     .contenedor-4{
-        display: inline-block;
-        width: auto;
-        padding: 0;
         margin: 5%;
+        width: auto;
+        display: inline-block;
     }
     
     .infografias{
         width: auto;
-        height: 340px;
+        height: 300px;
         background-size: 15rem;
         background-repeat: no-repeat;
         background-position-x: center;
-        margin: 5%;
     }
     .campana {
-        width: 340px;
-        height: 330px;
+        width:auto;
+        height: auto;
         margin: 5%;
+        padding: 0.3rem;
     }
 
-    .reciclaje{
-        width: 340px;
-        height: 410px;
-        margin: 5%;
-    }
 
     .parrafo{
         margin: 10%;
         width: auto;
-        height: 300px;
+        height: 280px;
         padding: 1rem;
         font-size: 0.8rem;
         overflow-y: hidden;
@@ -1219,29 +1206,27 @@ button:hover{
         margin: 5%;
         width: auto;
     }
+
     .emac{
+        width: auto;
+    }
+
+    
+    .tarjetas{
+        display: inline-block;
+        margin: 10% 15%;
         width: auto;
         height: auto;
     }
     
-    .tarjetas{
-        width: 350px;
-        height: auto;
-        display: inline-block;
-        margin: 0;
-        padding: 0;
-        gap:0;
-        perspective: 3000px;
-        overflow: hidden;
+    .tarjeta{
+        margin: 15% 0;
+        width: 250px;
+        height: 35rem;
     }
     
-    .tarjeta{
-        width: 300px;
-        height: 20rem;
-        margin: 10%;
-    }
-
-    .texto{
+     .texto{
+        overflow-y: hidden;
         font-size: 0.7rem;
     }
 
@@ -1252,7 +1237,7 @@ button:hover{
 
     .contenedor-3 {
         width: auto;
-        margin: 5rem 0;
+        margin: 5%;
     }
     
     .curiosidades{
@@ -1262,9 +1247,8 @@ button:hover{
     
     
     .card-list {
-        width: auto;
+        width:auto;
         display: inline-block;
-        padding: 0;
         height: auto;
         margin: 5rem 0;
     }
@@ -1273,7 +1257,7 @@ button:hover{
         height: auto;
         width: auto;
         padding: 1.5rem;
-        margin: -30% 5%;
+        margin: -6rem 5%;
     }
 
     .card:focus-within~.card, .card:hover~.card {
@@ -1302,24 +1286,24 @@ button:hover{
     }
 
     .footer {
-        padding: 2rem 5rem;
-
+        width: auto;
+        height: auto;
     }
 
     .footer-contenedor{
-        gap: 1rem;
+        width: auto;
+        gap: 2rem;
     }
 
     .tarjeta{
         height: 21rem;
     }
+
+    .fotter-texto{
+        margin: 0.3rem;
+        font-size: 0.5rem;
+    }
     .footer-titulo{
         font-size: 0.7rem;
     }
-
-    .fotter-texto{
-        margin: 0.2rem;
-        font-size: 0.5rem;
-    }
-
 }
